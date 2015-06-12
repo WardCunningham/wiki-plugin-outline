@@ -7,21 +7,20 @@ escape = (text)->
 
 render = (node) ->
   result = """<li>#{ node.text || 'trouble'}</li>"""
-  if node.subs?
-
-    result += "<ul>#{(render other for other in node.subs).join "\n"}</ul>"
+  result += "<ul>#{(render s for s in node.subs).join ''}</ul>" if node.subs?
   result
 
 emit = ($item, item) ->
   $item.append """
     <div style="background-color:#eee;padding:15px;">
-      #{render item.outline}
+      <ul>#{render item.outline}</ul>
     </div>
   """
 
 bind = ($item, item) ->
-  $item.dblclick -> wiki.textEditor $item, item
+  html = "<pre>#{JSON.stringify item.outline, null, '  '}</pre>"
+  $item.dblclick -> wiki.dialog 'JSON for Outline', html
 
 window.plugins.outline = {emit, bind} if window?
-module.exports = {} if module?
+module.exports = {render} if module?
 

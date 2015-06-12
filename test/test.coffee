@@ -4,10 +4,12 @@
 outline = require '../client/outline'
 expect = require 'expect.js'
 
-describe 'outline plugin', ->
+describe 'outline', ->
 
-  describe 'expand', ->
+  it 'does text', ->
+    result = outline.render {text: 'foo'}
+    expect(result).to.be '<li>foo</li>'
 
-    # it 'can make itallic', ->
-    #   result = outline.expand 'hello *world*'
-    #   expect(result).to.be 'hello <i>world</i>'
+  it 'does subs', ->
+    result = outline.render {text: 'foo', subs: [{text: 'bar'}]}
+    expect(result).to.be '<li>foo</li><ul><li>bar</li></ul>'
