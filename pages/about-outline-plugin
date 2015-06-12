@@ -1,0 +1,37 @@
+{
+  "title": "About Outline Plugin",
+  "story": [
+  {
+    "type": "paragraph",
+    "id": "c5fd2d89ba2a9ed7",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "outline",
+    "id": "71e3ee6a51a5f89e",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+],
+  "journal": [
+  {
+    "type": "create",
+    "item": {
+      "title": "About Outline Plugin",
+      "story": [
+  {
+    "type": "paragraph",
+    "id": "c5fd2d89ba2a9ed7",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "outline",
+    "id": "71e3ee6a51a5f89e",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+]
+    },
+    "date": 1433977718000,
+    "certificate": "from mkplugin.sh"
+  }
+]
+}
