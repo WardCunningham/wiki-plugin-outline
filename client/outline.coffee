@@ -13,7 +13,7 @@ render = (node) ->
 emit = ($item, item) ->
   $item.append """
     <div style="background-color:#eee;padding:15px;">
-      <ul>#{render item.outline}</ul>
+      <ul>#{render item.outline || {}}</ul>
     </div>
   """
 
